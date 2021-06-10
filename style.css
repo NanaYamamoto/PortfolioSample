@@ -7,19 +7,16 @@ body {
     min-width: 1076px;
 }
 
-footer p {
-    text-align: center;
-}
-h2{
+.sub-title {
     font-size: 30px;
 }
 .color-blue {
     color: #87CEFA;
 }
 
-/*************
-    ヘッダー
-**************/
+/******************
+    header
+******************/
 .header-title {
     margin: 10px 0;
     padding: 0 20px 10px;
@@ -33,85 +30,167 @@ h2{
     letter-spacing: 1px;
 }
 
-/****************
-    メイン　profile
-******************/
+/**************
+    main　
+***************/
 .box-main {
-    /* margin-top: 50px; */
-    /* margin: 100px; */
-    margin-top: 100px;
+    text-align: center;
+    margin: 100px 0;
 }
 
-.box-profile {
-    margin: 0 100px;
-    padding: 0 auto;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 270px;
+/*************
+    profile
+***************/
+.item-list {
+    width: 100%;
+    max-width: 348px;
+    margin: 0 auto;
 }
-
-.box-profile h2 {
-    margin-bottom: 30px;
-}
-
-.box-profile .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 170px;
-}
-
-.box-profile .profile img {
-    margin-bottom: 15px;
-}
-.box-profile .profile b {
+.item-list b {
+    display: block;
     font-weight: normal;
     font-size: 20px;
+    margin: 20px 0 30px;
+}
+.item-list p {
+    font-size: 15px;
+    line-height: normal;
+    text-align: left; 
 }
 
-.box-profile .icons {
-    margin-top: 15px;
+.icon-list {
+    width: 100%;
+    max-width: 247px;
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.box-profile .icons img{
+.icon-list img{
     margin-right: 22px;
 }
-.box-profile .icons img:last-child{
+.icon-list img:last-child{
     margin-right: 0;
 }
 
 
 /****************
-    メイン　works
+    works
 ******************/
 .box-works {
-    margin-top: 100px;
+    margin: 80px 0 0;
+}
+.works-list {
+    list-style: none;
+    width: 100%;
+    max-width: 1076px;
+    margin: 30px auto;
+    text-align: left;
+    overflow: hidden;
+    padding: 0;
 }
 
-.box-works h2 {
+.works-list li{
+    display: block;
+    width: 100%;
+    max-width: 348px;
+    float: left;
+    margin-right: 15px;
+}
+.works-list li:last-child {
+    margin-right: 0;
+}
+.works-list li img{ 
+    width: 100%;
+    border: 1px solid #CCC;
+}
+.works-list li .link {
+    display:flex;
+    justify-content:left;
+    align-items:left;
+    margin-top:15px;
+    
+}
+.works-list li .link a{
+    text-decoration: none;
+    background-color: #CCC;
+    color: black;
+    font-size:15px;
+    padding:5px 20px;
+    margin-right:10px;
+}
+
+
+/*************
+    フッター
+**************/
+footer p {
     text-align: center;
 }
-.works{
-    margin: 30px auto 100px;
-    width: 70%;
-    display: flex;
-}
-.works .work {
-    margin-right: 20px;
-}
-.works .work h3{
-    font-size: 20px;
-}
-.works .work img {
-    border: 1px solid gray;
-}
 
-.works .work a {
-    padding: 5px 20px;
-    background-color:rgb(226, 226, 226);
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-    margin-right: 15px;
+
+/********************
+    スマホ用
+**********************/
+@media screen and (max-width:767px){
+    body {
+        min-width: 100%;
+    }
+
+    /***
+    header
+    ****/
+    .header-title {
+        padding: 0 10px 10px;
+        box-shadow: 0 8px 8px -5px rgba(204, 204, 204, 0.3);
+    }
+    .header-title a {
+        font-size: 30px;
+    }
+
+    /*****
+    main
+    *****/
+    .box-main {
+        max-width: 100%;
+        margin: 50px 0;
+    }
+
+    /*****
+    profile
+    *******/
+    .box-profile {
+        padding: 0 10px;
+    }
+    .item-list {
+        max-width: 100%;
+    }
+    .item-list b {
+        font-size: 18px;
+    }
+    .icon-list {
+        max-width: 100%;
+    }
+    .icon-list li{
+        margin-right: 25px;
+    }
+
+    /*****
+    works
+    ******/
+    .box-works {
+        margin: 60px 0 0;
+        padding: 0 10px;
+    }
+    .works-list {
+        max-width: 100%;
+    }
+    .works-list li {
+        max-width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
 }
